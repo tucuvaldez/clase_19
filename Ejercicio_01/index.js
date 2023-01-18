@@ -34,4 +34,8 @@ try {
         apellido: 'Blanco'
     }, { $set: { dni: 20355875 } })
     console.log(rta)
-} catch (err) { console.log('Error en el proceso de base datos'); }
+} catch (err) {
+    console.log('Error en el proceso de base datos', err);
+} finally {
+    await mongoose.disconnect()
+}
