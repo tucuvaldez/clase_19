@@ -34,4 +34,4 @@ try {
         apellido: 'Blanco'
     }, { $set: { dni: 20355875 } })
     console.log(rta)
-} catch { console.error(err); }
+} catch (err) { console.log('Error en el proceso de base datos'); }
